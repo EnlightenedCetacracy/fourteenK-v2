@@ -10,7 +10,7 @@ import { state } from '../state';
  * @param {'invisible'|'placeholder'} [props.placeholderMode='invisible']
  * @param {preact.ComponentChildren} props.children
  */
-export function Section({ id, shouldShow, placeholderMode = 'invisible', children }) {
+export function Section({ id, shouldShow = ()=>true, placeholderMode = 'invisible', children }) {
   const visible = shouldShow(state);
   const sectionRef = useRef(null);
 
