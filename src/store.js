@@ -8,6 +8,11 @@ export const store = {
     // NB No need to notify, signals handle reactivity
   },
 
+  setMultiChoices(id, value) {
+    state.multiChoices.value = { ...state.multiChoices.value, [id]: value };
+    // NB No need to notify, signals handle reactivity
+  },
+
   setInput(id, value) {
     state.inputs.value = { ...state.inputs.value, [id]: value };
   },
