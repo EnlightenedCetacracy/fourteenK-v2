@@ -22,15 +22,22 @@ export function App() {
 	return (
 		<div class="app">
 			<h1>A form::: </h1>
-      <Section id="basic-section">
-        <Tickbox id="notifications" />
-        <TextInput id="username" />
-      </Section>
 
-      <Section id="advanced-section">
-        <TextInput id="api-key" />
-        <Tooltip id="key-help" content="Paste your API token here" />
-      </Section>
+      <div class="section-group">
+        <h2>General</h2>
+        <Section id="basic-section">
+          <Tickbox id="notifications" />
+          <TextInput id="username" />
+        </Section>
+      </div>
+
+      <div class="section-group">
+        <h2>Advanced</h2>
+        <Section id="advanced-section">
+          <TextInput id="api-key" />
+          <Tooltip id="key-help" content="Paste your API token here" />
+        </Section>
+      </div>
 		</div>
 	);
 }
